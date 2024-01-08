@@ -1,38 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+/* General styling for the app container */
 .App {
+  max-width: 800px;
+  /* Adjusted max-width for better readability */
+  margin: 0 auto;
+  padding: 20px;
+  /* Added padding for a cleaner look */
+  text-align: center;
+  /* Center-align text content */
+}
+
+/* Styling for the title element */
+.title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  color: rgb(11, 175, 148);
+  text-shadow: 3px 3px rgb(255, 153, 0);
+}
+
+/* Styling for subtitles */
+.subtitle {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  text-shadow: 3px 3px rgb(11, 175, 148);
+  color: rgb(255, 153, 0);
+}
+
+/* Styling for h2 elements */
+h2 {
+  color: rgb(165, 81, 13);
+}
+
+/* Divider styling */
+.divider {
+  width: 50%;
+  height: 1px;
+  border-bottom: 4px solid rgba(255, 41, 41, 0.555);
+  margin: 20px auto;
+}
+
+/* Styling for a list of items */
+.list {
+  background-color: rgba(255, 166, 0, 0.4);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  gap: 1rem;
+  border: 5px solid orange;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+/* Styling for selected items in a list */
+.selected {
+  background-color: rgba(116, 116, 255, 0.315);
+}
+
+/* Styling for the avatar container */
+.avatar {
+  width: 260px;
+  height: 280px;
+  position: relative;
+}
+
+/* Styling for the avatar wrapper */
+.avatar-wrapper {
+  border-radius: 40px;
+  display: inline-block;
+  border: 15px solid rgb(11, 175, 148);
+  padding: 50px;
+  position: sticky;
+  background-color: #fff;
+  top: calc(50% - 205px);
+}
+
+/* Cursor styling for clickable elements */
+.clickable {
+  cursor: pointer;
+}
+
+/* Styling for square elements */
+.square {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.151);
+  transition-duration: 0.2s;
+}
+
+/* Hover effect for square elements */
+.square:hover {
+  background-color: rgba(255, 137, 116, 0.315);
+  transition-duration: 0.2s;
+}
+
+/* Styling for centered images */
+.img-center {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Gap styling */
+.gap-30 {
+  gap: 30px;
+}
+
+/* Text alignment styling */
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Styling for the avatar group container */
+.avatar-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 1150px) {
+  .list {
+    max-width: 700px;
+  }
+
+  .avatar-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar-wrapper {
+    padding: 0px;
+  }
+}
+
+/* Styling for a section with a max width and centered text */
+.list-section {
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Button styling */
+.button {
+  background-color: rgb(202, 81, 25);
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0 10px;
   color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition-duration: 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+/* Hover effect for buttons */
+.button:hover {
+  transition-duration: 0.2s;
+  background-color: rgb(139, 55, 16);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styling for a green button */
+.button-green {
+  transition-duration: 0.2s;
+  background-color: rgb(11, 175, 134);
+}
+
+/* Hover effect for green buttons */
+.button-green:hover {
+  transition-duration: 0.2s;
+  background-color: rgb(18, 126, 99);
 }
